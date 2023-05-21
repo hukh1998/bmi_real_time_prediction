@@ -26,6 +26,7 @@ cascPath = "haarcascade_frontalface_default.xml"
 faceCascade = cv2.CascadeClassifier(cascPath)
 font = cv2.FONT_HERSHEY_SIMPLEX
 
+@st.cache_data(show_spinner=False)
 def preprocessing(img):
     
     sample = img.copy()
@@ -60,7 +61,7 @@ def prediction(img):
 
     return Image.fromarray(image)
     
-
+@st.cache_data(show_spinner=False)
 def add_bg_from_url():
     st.markdown(
          f"""

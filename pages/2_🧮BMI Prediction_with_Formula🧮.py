@@ -1,5 +1,6 @@
 import streamlit as st
 
+@st.cache_data(show_spinner=False)
 def add_bg_from_url():
     st.markdown(
          f"""
