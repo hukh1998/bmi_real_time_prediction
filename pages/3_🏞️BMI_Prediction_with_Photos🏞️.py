@@ -1,3 +1,7 @@
+filename = '/home/appuser/venv/lib/python3.9/site-packages/keras_vggface/models.py'
+text = open(filename).read()
+open(filename, 'w+').write(text.replace('keras.engine.topology', 'tensorflow.keras.utils'))
+
 import streamlit as st
 import cv2
 import numpy as np
@@ -13,6 +17,9 @@ from tensorflow.keras.preprocessing.image import load_img
 import warnings
 from PIL import Image
 warnings.filterwarnings("ignore")
+from turn import get_ice_servers
+import threading
+from typing import Union
 
 # Load the VGGFace model
 resnet = VGGFace(model = 'resnet50', include_top = False, input_shape = (224, 224, 3), pooling = 'avg')
