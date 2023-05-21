@@ -1,18 +1,18 @@
 import streamlit as st
 
-def add_bg_from_url():
-    st.markdown(
-         f"""
-         <style>
-         .stApp {{
-             background-image: url("https://bpb-us-w2.wpmucdn.com/voices.uchicago.edu/dist/e/2560/files/2019/04/UChicago_Phoenix-Wallpaper-Gray.jpg");
-             background-attachment: fixed;
-             background-size: cover
-         }}
-         </style>
-         """,
-         unsafe_allow_html=True
-     )
+# def add_bg_from_url():
+#     st.markdown(
+#          f"""
+#          <style>
+#          .stApp {{
+#              background-image: url("https://bpb-us-w2.wpmucdn.com/voices.uchicago.edu/dist/e/2560/files/2019/04/UChicago_Phoenix-Wallpaper-Gray.jpg");
+#              background-attachment: fixed;
+#              background-size: cover
+#          }}
+#          </style>
+#          """,
+#          unsafe_allow_html=True
+#      )
     
 
 st.set_page_config(
@@ -20,7 +20,7 @@ st.set_page_config(
     layout = "wide",
     initial_sidebar_state="expanded")
 
-add_bg_from_url() 
+#add_bg_from_url() 
 
 st.sidebar.success("Select a method above.")
 
