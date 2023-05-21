@@ -1,0 +1,13 @@
+streamlit
+streamlit-webrtc
+opencv-python-headless
+numpy
+tensorflow
+Keras
+pandas
+av
+Keras
+keras_vggface
+keras_applications
+scikit-learn
+twilio
