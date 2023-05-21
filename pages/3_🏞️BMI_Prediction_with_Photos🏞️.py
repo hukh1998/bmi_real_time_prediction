@@ -17,9 +17,6 @@ from tensorflow.keras.preprocessing.image import load_img
 import warnings
 from PIL import Image
 warnings.filterwarnings("ignore")
-from turn import get_ice_servers
-import threading
-from typing import Union
 
 # Load the VGGFace model
 resnet = VGGFace(model = 'resnet50', include_top = False, input_shape = (224, 224, 3), pooling = 'avg')

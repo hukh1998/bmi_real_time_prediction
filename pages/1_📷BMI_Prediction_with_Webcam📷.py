@@ -18,6 +18,9 @@ from tensorflow.keras.preprocessing.image import load_img
 import warnings
 warnings.filterwarnings("ignore")
 import av
+from turn import get_ice_servers
+import threading
+from typing import Union
 
 # Load the VGGFace model
 resnet = VGGFace(model = 'resnet50', include_top = False, input_shape = (224, 224, 3), pooling = 'avg')
@@ -87,6 +90,6 @@ add_bg_from_url()
 
 st.write("# Use Webcam to Find Your BMI!🎚️")
 
-webrtc_streamer(key = 'Use the Webcam', sendback_audio = False, video_processor_factory = VideoProcessor)
+webrtc_streamer(key = 'Use the Webcam', sendback_audio = False, video_processor_factory = VideoProcessor, rtc_configuration={'iceServers': get_ice_servers()})
 
 
