@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 @st.cache_data(show_spinner=False)
 def add_bg_from_url():
@@ -25,7 +26,6 @@ add_bg_from_url()
 
 st.sidebar.success("Select a method above.")
 
-
 st.write("# BMI Prediction! 👋")
 
 st.markdown(
@@ -33,3 +33,11 @@ st.markdown(
     The goal of this application is to replicate the findings in this paper https://arxiv.org/abs/1703.03156
 """
 )
+
+st.subheader("Adult Body Mass Index (BMI)")
+
+bmi = ['Below 18.5', '18.5 to 24.9', '25.0 to 29.9', '30 or higher', '40 or higher']
+consider = ['Underweight', 'Healthy weight', 'Overweight', 'Obesity', 'Class 3 Obesity']
+
+df = pd.DataFrame({"BMI": bmi, "Considered" : consider})
+st.table(df)
