@@ -16,25 +16,22 @@ def add_bg_from_url():
          unsafe_allow_html=True
      )
     
-@st.cache_data(show_spinner=False)
-def main():
 
-    st.set_page_config(
-        page_title = "BMI Prediction",
-        layout = "wide",
-        initial_sidebar_state="expanded")
 
-    add_bg_from_url() 
+st.set_page_config(
+    page_title = "BMI Prediction",
+    layout = "wide",
+    initial_sidebar_state="expanded")
 
-    st.sidebar.success("Select a method above.")
+add_bg_from_url() 
 
-    st.write("# BMI Prediction! 👋")
+st.sidebar.success("Select a method above.")
 
-    st.markdown(
-        """
-        The goal of this application is to replicate the findings in this paper https://arxiv.org/abs/1703.03156
+st.write("# BMI Prediction! 👋")
+
+st.markdown(
     """
-    )
+    The goal of this application is to replicate the findings in this paper https://arxiv.org/abs/1703.03156
+"""
+)
 
-if __name__ == '__main__':
-    main()
