@@ -26,7 +26,7 @@ add_bg_from_url()
 st.write("# Enter Information to Find Your BMI!🎚️")
 
 height = st.text_input("Enter your height (cm): ")
-weight = st.text_input("Enter your height (kg): ")
+weight = st.text_input("Enter your weight (kg): ")
 cal = st.button('Calculate')
 
 if cal:
