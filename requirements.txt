@@ -11,3 +11,8 @@ keras_vggface
 keras_applications
 scikit-learn
 twilio
+cv2
+pickle
+PIL
+threading
+typing
