@@ -37,11 +37,12 @@ st.markdown(
 
 col1, col2 = st.columns(2)
 
-st.subheader("Adult Body Mass Index (BMI)")
+
 
 bmi = ['Below 18.5', '18.5 to 24.9', '25.0 to 29.9', '30 or higher', '40 or higher']
 consider = ['Underweight', 'Healthy weight', 'Overweight', 'Obesity', 'Class 3 Obesity']
 
 df = pd.DataFrame({"BMI": bmi, "Considered" : consider})
 with col1:
+    st.subheader("Adult Body Mass Index (BMI)")
     st.table(df)
